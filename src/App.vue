@@ -2,12 +2,14 @@
 import Navbar from "@/components/Navbar.vue";
 import Hero from "@/components/Hero.vue";
 import HomeCards from "@/components/HomeCards.vue";
+import JobListings from "./components/JobListings.vue";
 </script>
 
 <template>
-  <Navbar/>
-  <Hero title='Become a Specialist'/>
-  <HomeCards/>
+  <Navbar />
+  <Hero title='Become a Specialist' />
+  <HomeCards />
+  <JobListings :limit="6" :showButton="true" />
 </template>
 
 <style></style>
