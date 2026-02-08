@@ -1,5 +1,5 @@
 <script setup>
-import { ref } from "vue";
+import { ref, onMounted } from "vue";
 
 const name = ref("Zahra Soleymani");
 const status = ref("active");
@@ -27,6 +27,19 @@ const addTask = () => {
 const removeTask = (task) => {
   tasks.value = tasks.value.filter((t) => t !== task);
 };
+
+onMounted(async () => {
+  try {
+    const response = await fetch("https://jsonplaceholder.typicode.com/todos");
+    if (!response.ok) {
+      throw new Error(response.status);
+    }
+    const data = await response.json();
+    tasks.value = data.map((task) => task.title);
+  } catch (error) {
+    alert(error);
+  }
+});
 </script>
 
 <template>
@@ -63,5 +76,9 @@ h1 {
 
 h2 {
   text-transform: uppercase;
+}
+
+input {
+  margin-left: 1rem;
 }
 </style>
