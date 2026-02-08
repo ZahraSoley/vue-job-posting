@@ -1,7 +1,13 @@
-<script></script>
+<script setup>
+import Navbar from "@/components/Navbar.vue";
+import Hero from "@/components/Hero.vue";
+import HomeCards from "@/components/HomeCards.vue";
+</script>
 
 <template>
-  <h1 class='text-primary'>vue jobs</h1>
+  <Navbar/>
+  <Hero title='Become a Specialist'/>
+  <HomeCards/>
 </template>
 
 <style></style>

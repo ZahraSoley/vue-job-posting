@@ -13,5 +13,10 @@
 }
 
 @theme{
-  --color-primary: #dac4f7 ;
+  --color-primary: #C7B9FF ;
+  --color-secondary: #BFE8FF ;
+  --color-accent:  #FFD6C9 ;
+  --color-highlight: #FFF1A8 ;
+  --color-text: #2E2A3B;
+  --color-background: #FAFAFF ;
 }
